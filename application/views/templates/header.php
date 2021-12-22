@@ -38,7 +38,7 @@
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="<?= base_url() ?>dashboard">
+              <a class="nav-link" href="<?= base_url() ?>kelolauser">
                 <i class="material-icons">people</i>
                 <p>Kelola Users</p>
               </a>

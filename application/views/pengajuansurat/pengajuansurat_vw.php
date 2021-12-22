@@ -1,82 +1,61 @@
 <div class="content">
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <form>
-                    <div class="form-row p-2">
+    <div class="container-fluid">
+        <?= $this->session->flashdata('message'); ?>
+        <div class="card mt-0">
+            <div class="card-body mt-3">
+                <form action="<?= base_url('pengajuansurat'); ?>" method="post">
+                    <div class="form-row p-2 ">
                         <div class="form-group col-md-6">
-                        <label for="inputEmail4">Nama</label>
-                        <input type="text" class="form-control" id="inputEmail4">
+                            <label for="nama_pengirim">Nama</label>
+                            <input type="text" class="form-control" id="nama_pengirim" name="nama_pengirim" value="<?= set_value('nama_pengirim'); ?>">
+                            <?= form_error('nama_pengirim', '<small class="text-danger">', '</small>'); ?>
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="inputPassword4">Jenis Surat</label>
-                        <input type="text" class="form-control" id="inputPassword4">
-                        </div>
-                    </div>
-                    <div class="form-row p-2">
-                        <div class="form-group col-md-6">
-                        <label for="inputEmail4">NIS/NIK</label>
-                        <input type="text" class="form-control" id="inputEmail4">
-                        </div>
-                        <div class="form-group col-md-6">
-                        <label for="inputPassword4">Perihal</label>
-                        <input type="text" class="form-control" id="inputPassword4">
+                            <label for="jenis_surat">Jenis Surat</label>
+                            <input type="text" class="form-control" id="jenis_surat" name="jenis_surat" value="<?= set_value('jenis_surat'); ?>">
+                            <?= form_error('jenis_surat', '<small class="text-danger">', '</small>'); ?>
                         </div>
                     </div>
                     <div class="form-row p-2">
                         <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4">
+                            <label for="no_induk">NIS/NIK</label>
+                            <input type="text" class="form-control" id="no_induk" name="no_induk" value="<?= set_value('no_induk'); ?>">
+                            <?= form_error('no_induk', '<small class="text-danger">', '</small>'); ?>
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="inputPassword4">Keterangan</label>
-                        <input type="text" class="form-control" id="inputPassword4">
+                            <label for="perihal">Perihal</label>
+                            <input type="text" class="form-control" id="perihal" name="perihal" value="<?= set_value('perihal'); ?>">
+                            <?= form_error('perihal', '<small class="text-danger">', '</small>'); ?>
                         </div>
                     </div>
                     <div class="form-row p-2">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">Pengajuan</label>
-                            <div class="form-check form-check-radio">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
-                                    Surat Keluar
-                                    <span class="circle">
-                                        <span class="check"></span>
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="form-check form-check-radio">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
-                                    Legalisir
-                                    <span class="circle">
-                                        <span class="check"></span>
-                                    </span>
-                                </label>
-                            </div>
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" value="<?= set_value('email'); ?>">
+                            <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">Upload File</label>
-                            <div class="form-group form-file-upload form-file-multiple">
-                                <input type="file" multiple="" class="inputFileHidden">
-                                <div class="input-group">
-                                    <input type="text" class="form-control inputFileVisible" placeholder="Single File">
-                                    <span class="input-group-btn">
-                                        <button type="button" class="btn btn-fab btn-round btn-primary">
-                                            <i class="material-icons">attach_file</i>
-                                        </button>
-                                    </span>
-                                </div>
+                            <label for="keterangan">Keterangan</label>
+                            <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?= set_value('keterangan'); ?>">
+                            <?= form_error('keterangan', '<small class="text-danger">', '</small>'); ?>
+                        </div>
+                    </div>
+                    <div class="form-row p-2">
+                        <div class="col-auto">
+                            <div class="form-group">
+                                <label for="jenis_pengajuan">Pengajuan</label>
+                                <select name="jenis_pengajuan" id="jenis_pengajuan" class="form-control">
+                                    <option value="Surat Keluar" selected>Surat Keluar</option>
+                                    <option value="Legalisir">Legalisir</option>
+                                </select>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                     <div class="text-right">
                         <button type="submit" class="btn btn-primary">Ajukan</button>
                     </div>
                 </form>
             </div>
         </div>
-   
-    </div>  
-</div>    
-      
+    </div>
+</div>

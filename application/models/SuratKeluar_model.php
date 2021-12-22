@@ -43,7 +43,7 @@ class SuratKeluar_model extends CI_Model
             "jenis_surat" => $this->input->post('jenis_surat', true),
             "perihal" => $this->input->post('perihal', true),
             "tgl_surat" => $this->input->post('tgl_surat', true),
-            "tgl_diterima" => $this->input->post('tgl_diterima', true),
+            "tgl_diterima" => $this->input->post('tgl_diterima', true)
         ];
 
         $this->db->where('no_suratkeluar', $id);
