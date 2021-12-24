@@ -98,7 +98,6 @@ class Auth extends CI_Controller
 
     public function logout()
     {
-
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role_id');
 
@@ -108,10 +107,5 @@ class Auth extends CI_Controller
         <span aria-hidden="true">&times;</span>
         </button></div>');
         redirect('auth');
-    }
-
-    public function blocked()
-    {
-        echo 'eror';
     }
 }
