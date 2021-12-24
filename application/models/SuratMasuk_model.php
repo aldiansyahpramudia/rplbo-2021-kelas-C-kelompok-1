@@ -48,4 +48,9 @@ class SuratMasuk_model extends CI_Model
         $this->db->where('no_suratmasuk', $id);
         $this->db->update('suratmasuk', $data);
     }
+
+    public function jumlahSuratMasuk()
+    {
+        return $this->db->get('suratmasuk')->num_rows();
+    }
 }

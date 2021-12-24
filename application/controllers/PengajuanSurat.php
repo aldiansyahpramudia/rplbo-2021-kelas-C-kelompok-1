@@ -6,9 +6,7 @@ class PengajuanSurat extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        if (!$this->session->userdata('email')) {
-            redirect('auth');
-        }
+        is_logged_in();
         $this->load->model('LaporanPengajuan_model');
         $this->form_validation->set_message('required', '%s tidak boleh kosong!');
         $this->form_validation->set_message('valid_email', 'Penulisan %s tidak sesuai format!');

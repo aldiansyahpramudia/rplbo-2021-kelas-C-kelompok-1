@@ -66,4 +66,9 @@ class LaporanPengajuan_model extends CI_Model
         $this->db->where('id_pengajuan', $id_pengajuan);
         $this->db->update('laporanpengajuan', $data);
     }
+
+    public function jumlahLaporanPengajuan()
+    {
+        return $this->db->get('laporanpengajuan')->num_rows();
+    }
 }

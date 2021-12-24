@@ -28,4 +28,9 @@ class KelolaUser_model extends CI_Model
         $this->db->where('id', $id);
         $this->db->update('users', $data);
     }
+
+    public function jumlahUsers()
+    {
+        return $this->db->get('users')->num_rows();
+    }
 }

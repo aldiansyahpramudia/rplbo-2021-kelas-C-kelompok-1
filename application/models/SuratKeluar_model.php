@@ -49,4 +49,9 @@ class SuratKeluar_model extends CI_Model
         $this->db->where('no_suratkeluar', $id);
         $this->db->update('suratkeluar', $data);
     }
+
+    public function jumlahSuratKeluar()
+    {
+        return $this->db->get('suratkeluar')->num_rows();
+    }
 }
