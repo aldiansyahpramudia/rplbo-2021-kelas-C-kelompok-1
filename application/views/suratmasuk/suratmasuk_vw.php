@@ -17,9 +17,9 @@
                             </a>
                         </div>
                         <div class="col-3">
-                            <form class="navbar-form">
+                            <form action="" method="post" class="navbar-form">
                                 <div class="input-group no-border">
-                                    <input type="text" value="" class="form-control" placeholder="Search...">
+                                    <input type="text" value="" class="form-control" placeholder="Search..." name="keyword">
                                     <button type="submit" class="btn btn-white btn-round btn-just-icon">
                                         <i class="material-icons">search</i>
                                     </button>
@@ -60,7 +60,7 @@
                                     <a href="<?= base_url() ?>suratmasuk/hapus/<?= $srm['no_suratmasuk']; ?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data surat?');">
                                         <i class="material-icons">delete</i>
                                     </a>
-                                    <a href="<?= base_url() ?>suratmasuk/detail/<?= $srm['no_suratmasuk']; ?>" class="btn btn-info" class="btn btn-info">
+                                    <a href="<?= base_url() ?>suratmasuk/detail/<?= $srm['no_suratmasuk']; ?>" class="btn btn-info">
                                         <i class="material-icons">view_list</i>
                                     </a>
                                 </td>

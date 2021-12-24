@@ -4,6 +4,7 @@
         <div class="card mt-0">
             <div class="card-body mt-3">
                 <form action="<?= base_url('pengajuansurat'); ?>" method="post">
+                    <input type="hidden" name="id" value="<?= $users['id'] ?>">
                     <div class="form-row p-2 ">
                         <div class="form-group col-md-6">
                             <label for="nama_pengirim">Nama</label>

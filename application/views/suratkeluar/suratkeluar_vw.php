@@ -60,7 +60,7 @@
                                     <a href="<?= base_url() ?>suratkeluar/hapus/<?= $srk['no_suratkeluar']; ?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data surat?');">
                                         <i class="material-icons">delete</i>
                                     </a>
-                                    <a href="<?= base_url() ?>suratkeluar/detail/<?= $srk['no_suratkeluar']; ?>" class="btn btn-info" class="btn btn-info">
+                                    <a href="<?= base_url() ?>suratkeluar/detail/<?= $srk['no_suratkeluar']; ?>" class="btn btn-info">
                                         <i class="material-icons">view_list</i>
                                     </a>
                                 </td>

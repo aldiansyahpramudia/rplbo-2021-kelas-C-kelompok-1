@@ -41,4 +41,28 @@ class PengajuanSurat extends CI_Controller
             redirect('pengajuansurat');
         }
     }
+
+    public function riwayat()
+    {
+        $data['users'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+        $data['laporanpengajuan'] = $this->LaporanPengajuan_model->getAllLaporanPengajuan();
+        $data['judul'] = 'Riwayat Laporan Pengajuan Surat';
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('pengajuansurat/riwayatpengajuan_vw', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function dibatalkan($id_pengajuan)
+    {
+        $data['laporanpengajuan'] = $this->db->get_where('laporanpengajuan', ['id_pengajuan' => $id_pengajuan])->row_array();
+
+        $this->LaporanPengajuan_model->hapusLaporanPengajuan($id_pengajuan);
+        $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        Laporan Pengajuan Berhasil Dibatalkan!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button></div>');
+        redirect('pengajuansurat/riwayat');
+    }
 }

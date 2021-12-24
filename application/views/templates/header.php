@@ -55,6 +55,39 @@
                 <p>Surat Keluar</p>
               </a>
             </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="<?= base_url() ?>laporanpengajuan">
+                <i class="material-icons">assignment</i>
+                <p>Laporan Pengajuan</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="<?= base_url() ?>laporanpengajuan/riwayat">
+                <i class="material-icons">history_edu</i>
+                <p>Riwayat Laporan</p>
+              </a>
+            </li>
+          <?php
+          } else if ($users['role_id'] == 'Resepsionis') {
+          ?>
+            <li class="nav-item ">
+              <a class="nav-link" href="<?= base_url() ?>dashboard">
+                <i class="material-icons">dashboard</i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="<?= base_url() ?>laporanpengajuan">
+                <i class="material-icons">assignment</i>
+                <p>Laporan Pengajuan</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="<?= base_url() ?>laporanpengajuan/riwayat">
+                <i class="material-icons">history_edu</i>
+                <p>Riwayat Laporan</p>
+              </a>
+            </li>
           <?php
           } else {
           ?>
@@ -65,9 +98,9 @@
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="<?= base_url() ?>laporanpengajuan">
-                <i class="material-icons">assignment</i>
-                <p>Laporan Pengajuan</p>
+              <a class="nav-link" href="<?= base_url() ?>pengajuansurat/riwayat">
+                <i class="material-icons">assignment_ind</i>
+                <p>Riwayat Pengajuan</p>
               </a>
             </li>
           <?php
